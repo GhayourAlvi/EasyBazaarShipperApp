@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shippers_app/home/tab_items.dart';
+import '../home_page.dart';
+import '../profile.dart';
 import 'home_scafflod.dart';
 
 
@@ -15,9 +17,9 @@ class _HomePageState extends State<HomePage> {
     return{
       Tabitems.location : (_) => Container(),
       Tabitems.Current : (_) => Container(),
-      Tabitems.wallet : (_) => Container(),
+      Tabitems.wallet : (_) => Wallet(),
       Tabitems.history : (_) => Container(),
-      Tabitems.account : (_) => Container(),
+      Tabitems.account : (_) => ProfilePage(),
     };
   }
 

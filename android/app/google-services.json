@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "924780750482",
+    "project_id": "easybazaar-shipper-app",
+    "storage_bucket": "easybazaar-shipper-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924780750482:android:91841746b573f27f2d684b",
+        "android_client_info": {
+          "package_name": "com.example.shippers_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924780750482-qbm3qlm3ecu4kohvobbkt9cv85ktc21c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKFZp1WKBDHJhkNhd8jNsYmet7t-ZY-Wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924780750482-qbm3qlm3ecu4kohvobbkt9cv85ktc21c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

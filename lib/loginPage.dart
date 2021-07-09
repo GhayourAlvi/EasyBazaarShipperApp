@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shippers_app/home/home_page.dart';
 import 'package:shippers_app/social_sign_in_button.dart';
-
-
+import 'package:mysql1/mysql1.dart';
+import 'package:shippers_app/mysqli.dart';
+import 'dart:developer';
 class LoginPage extends StatefulWidget {
 
   @override
@@ -13,12 +14,32 @@ class _State extends State<LoginPage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
+  var db = new Mysql();
+  var mail = '';
+  void getUserData(){
+
+    print("Ye ly");
+
+//    db.getConnection().then((conn) {
+//
+//
+//      String sql = 'SELECT email FROM easybazaar.databasee_authentication';
+//
+//      conn.query(sql).then((results) {
+//
+//      for(var row in results){
+//        setState(() {
+//          mail = row[0];
+//        });
+//      }
+//      });
+//    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Login'),
-        ),
+
         body: Padding(
             padding: EdgeInsets.all(10),
             child: ListView(
@@ -29,60 +50,74 @@ class _State extends State<LoginPage> {
                     child: Text(
                       'Easy Bazaar',
                       style: TextStyle(
-                          color: Colors.indigo,
-                          fontWeight: FontWeight.w500,
+                          color: Colors.green,
+                          fontWeight: FontWeight.w900,
+                          fontFamily: 'Trebuchet MS',
                           fontSize: 30),
                     )),
                 Container(
-                  padding: EdgeInsets.all(10),
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                      'lib/images/easybazar.jpg',
+                    width: 200.0,
+                    height: 85,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(8),
                   child: TextField(
                     controller: nameController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Enter User Name',
+                      labelText: 'Email',
                     ),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                  padding: EdgeInsets.all(8),
                   child: TextField(
                     obscureText: true,
                     controller: passwordController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
+
                     ),
                   ),
                 ),
                 FlatButton(
                   onPressed: (){
-                    //forgot password screen
+
                   },
-                  textColor: Colors.indigo,
-                  child: Text('Forgot Password'),
+                  textColor: Colors.green,
+                  child: Text('Forgate Password ?'),
                 ),
                 Container(
                     height: 50,
                     padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: RaisedButton(
                       textColor: Colors.white,
-                      color: Colors.indigo,
+                      color: Colors.green,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0)),
                       child: Text('Login'),
                       onPressed: () {
+
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => HomePage()),
                         );
                         },
                     )),
+                SizedBox(height: 8,),
                 Container(
                     child: Row(
                       children: <Widget>[
                         Text('Does not have account?'),
                         FlatButton(
-                          textColor: Colors.indigo,
+                          textColor: Colors.green,
                           child: Text(
-                            'Sign in',
+                            'Sign Up',
                             style: TextStyle(fontSize: 20),
                           ),
                           onPressed: () {
@@ -93,19 +128,26 @@ class _State extends State<LoginPage> {
                       ],
                       mainAxisAlignment: MainAxisAlignment.center,
                     )),
+                SizedBox(height: 8,),
                 Container(
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.fromLTRB(50, 0, 10, 0),
                   child: Row(
                     children: <Widget>[
-                      Center(
-                      child: Column(
+
+                       Column(
                         children: <Widget>[
-                          SizedBox(height: 40.0,  child: SocialSignInButton(
+                          Center(
+                          child: SizedBox(height: 40.0,  child: SocialSignInButton(
                             assetName: 'lib/images/google-logo.png',
                             text: ' Sign in with Google',
                             textColor: Colors.black87,
                             color: Colors.white,
                             onPressed: () {},
                           ),),
+                          ),
+
+
                           SizedBox(height: 8,),
 
                           SizedBox(height: 40.0,child:
@@ -121,7 +163,7 @@ class _State extends State<LoginPage> {
 
                         ],
                       ),
-                      )
+
 
 
 

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shippers_app/profile.dart';
 import 'package:shippers_app/sign_in.dart';
 
 import 'home/home_page.dart';
+import 'home_page.dart';
 import 'loginPage.dart';
 
 void main() {
