@@ -12,7 +12,7 @@ class Wallet extends StatefulWidget {
 class _HomePageState extends State<Wallet> {
   bool _isIncome = false;
 
-  static const Color _primaryColor = Colors.indigo;
+  static const Color _primaryColor = Colors.green;
   static const Color _secondaryColor = Colors.deepOrangeAccent;
 
   List<TransactionModel> _transactionList = [

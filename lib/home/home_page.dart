@@ -17,8 +17,8 @@ class _HomePageState extends State<HomePage> {
     return{
       Tabitems.location : (_) => Container(),
       Tabitems.Current : (_) => Container(),
-      Tabitems.wallet : (_) => Wallet(),
-      Tabitems.history : (_) => Container(),
+      Tabitems.wallet : (_) => Container(),
+      Tabitems.history : (_) => Wallet(),
       Tabitems.account : (_) => ProfilePage(),
     };
   }

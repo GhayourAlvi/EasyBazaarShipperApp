@@ -70,25 +70,25 @@ class ProfilePage extends StatelessWidget{
                         height: 35,
                         child:  textfield(hintText: 'Pano Akil' , ),
                       ),
-                      Container(
-                        height: 40,
-                        width: 100,
-                        child: RaisedButton(
-                          onPressed: (){},
-                          color: Colors.indigo,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0)),
-
-
-                          child: Center(
-                            child: Text("Update Profile" , style: TextStyle(
-                              fontSize: 12,
-                              color: Colors.white,
-                            ),),
-
-                          ),
-                        ),
-                      )
+//                      Container(
+//                        height: 40,
+//                        width: 100,
+//                        child: RaisedButton(
+//                          onPressed: (){},
+//                          color: Colors.indigo,
+//                          shape: RoundedRectangleBorder(
+//                              borderRadius: BorderRadius.circular(30.0)),
+//
+//
+//                          child: Center(
+//                            child: Text("Update Profile" , style: TextStyle(
+//                              fontSize: 12,
+//                              color: Colors.white,
+//                            ),),
+//
+//                          ),
+//                        ),
+//                      )
                     ],
                   ),
                 )
@@ -150,7 +150,7 @@ class ProfilePage extends StatelessWidget{
 class HeaderCurvedContainer extends CustomPainter{
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color=Colors.indigo;
+    Paint paint = Paint()..color=Colors.green;
     Path path = Path()..relativeLineTo(0, 160)..quadraticBezierTo(size.width/2, 190, size.width, 150)..relativeLineTo(0, -150)..close();
     canvas.drawPath(path, paint);
 

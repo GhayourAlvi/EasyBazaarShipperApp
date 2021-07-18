@@ -8,11 +8,11 @@ class TabItemData {
   final IconData icon;
 
 static const Map<Tabitems , TabItemData> allTabs = {
-  Tabitems.location : TabItemData(title: 'Location' , icon: Icons.location_on ),
-  Tabitems.Current : TabItemData(title: 'Current' , icon: Icons.bookmark_border ),
-  Tabitems.wallet : TabItemData(title: 'Wallet' , icon: Icons.account_balance_wallet ),
-  Tabitems.history : TabItemData(title: 'History' , icon: Icons.history ),
-  Tabitems.account : TabItemData(title: 'Account' , icon: Icons.person ),
+  Tabitems.location : TabItemData(title: 'Status' , icon: Icons.location_on ),
+  Tabitems.Current : TabItemData(title: 'Deliveries' , icon: Icons.assignment ),
+  Tabitems.wallet : TabItemData(title: 'Map' , icon: Icons.map ),
+  Tabitems.history : TabItemData(title: 'Wallet' , icon: Icons.account_balance_wallet ),
+  Tabitems.account : TabItemData(title: 'Account' , icon: Icons.account_circle ),
 };
 
 

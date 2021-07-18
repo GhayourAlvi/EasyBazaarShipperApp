@@ -68,8 +68,15 @@ class _State extends State<LoginPage> {
                   child: TextField(
                     controller: nameController,
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey)
+                      ),
                       labelText: 'Email',
+
+                      hintText: 'Enter your Email',
                     ),
                   ),
                 ),
@@ -79,8 +86,15 @@ class _State extends State<LoginPage> {
                     obscureText: true,
                     controller: passwordController,
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green)
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey)
+                      ),
+                      focusColor: Colors.green,
                       labelText: 'Password',
+                      hintText: 'Enter your Password',
 
                     ),
                   ),
@@ -100,7 +114,12 @@ class _State extends State<LoginPage> {
                       color: Colors.green,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18.0)),
-                      child: Text('Login'),
+                      child: Text('Login',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
+
+                      ) ,
                       onPressed: () {
 
                         Navigator.push(
@@ -118,7 +137,7 @@ class _State extends State<LoginPage> {
                           textColor: Colors.green,
                           child: Text(
                             'Sign Up',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 16),
                           ),
                           onPressed: () {
                           //Sign Up Page
@@ -138,7 +157,8 @@ class _State extends State<LoginPage> {
                        Column(
                         children: <Widget>[
                           Center(
-                          child: SizedBox(height: 40.0,  child: SocialSignInButton(
+                          child: SizedBox(height: 40.0, width: 250.0,
+                            child: SocialSignInButton(
                             assetName: 'lib/images/google-logo.png',
                             text: ' Sign in with Google',
                             textColor: Colors.black87,
@@ -150,7 +170,8 @@ class _State extends State<LoginPage> {
 
                           SizedBox(height: 8,),
 
-                          SizedBox(height: 40.0,child:
+                          SizedBox(height: 40.0, width: 250.0,
+                            child:
                           SocialSignInButton(
                             assetName: 'lib/images/facebook-logo.png',
                             text: ' Sign in with Facebook',
